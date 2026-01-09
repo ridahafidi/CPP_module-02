@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:46:37 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/29 16:42:08 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/09 18:53:30 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,13 @@ std::ostream& operator<<(std::ostream &os, const Fixed &other)
 {
     os << other.toFloat();
     return os;
+}
+
+Fixed::Fixed():value(0)
+{
+    std::cout << "Default constructor called" << std::endl;
+}
+Fixed::Fixed(const Fixed &other):value(other.value)
+{
+    std::cout << "Copy constructor called" << std::endl;
 }

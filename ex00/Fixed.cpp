@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:46:37 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/30 15:37:08 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/09 18:53:42 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,13 @@ void    Fixed::setRawBits(const int raw)
 {
     std::cout << "setRawBits memebr function called" << std::endl;
     value = raw;
+}
+
+Fixed::Fixed():value(0)
+{
+    std::cout << "Default constructor called" << std::endl;
+}
+Fixed::Fixed(const Fixed &other):value(other.value)
+{
+    std::cout << "Copy constructor called" << std::endl;
 }

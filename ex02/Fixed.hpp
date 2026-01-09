@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:35:58 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/30 15:33:58 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/09 19:00:46 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ private:
     int value;
     static const int fractional;
 public:
-    Fixed():value(0){};
+    Fixed();
     Fixed(const int new_val);
     Fixed(const float new_val);
     float   toFloat(void) const;
     int     toInt(void) const;
-    Fixed(const Fixed &other):value(other.value){};
+    Fixed(const Fixed &other);
     Fixed &operator=(const Fixed &other);
     bool operator>(const Fixed &other) const;
     bool operator<(const Fixed &other) const;
